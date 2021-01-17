@@ -2967,3 +2967,22 @@ let movies = [
       "rate": 8
     }
   ]
+
+ 
+  function ratesAverage(arr) {
+    if (arr.length === 0) {
+      return 0
+    }
+    let sumMov =   arr.reduce(function(sum, element){
+      // if (!element.rate) {
+      //   return sum
+      // }
+      return sum + element.rate
+    }, 0)  
+    //  console.log((sumMov / arr.length).toFixed(2))
+    let average = Number((sumMov / arr.length).toFixed(2))
+    console.log(average, typeof average)
+    return average;
+  }
+
+ console.log(ratesAverage(movies)) 
